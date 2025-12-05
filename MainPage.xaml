@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:cv="clr-namespace:Camera.MAUI;assembly=Camera.MAUI"
+             x:Class="IngridDemo4.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25"
+            VerticalOptions="Fill"
+            HorizontalOptions="Fill">
+
+            <cv:CameraView x:Name="cameraView" WidthRequest="300" HeightRequest="300"
+                           CamerasLoaded="cameraView_CamerasLoaded"/>
+
+            <!--<Button Text="Smile!" Clicked="Button_Clicked"/>
+            <Image x:Name="myImage" WidthRequest="200" HeightRequest="200"/>-->
+
+            <Button
+                x:Name="PictureBtn"
+                Text="Take Picture"
+                SemanticProperties.Hint="Takes a picture for the OCR"
+                Clicked="PictureBtn_Clicked"
+                HorizontalOptions="Fill"/>
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Pick Image"
+                SemanticProperties.Hint="Pick image for OCR"
+                Clicked="CounterBtn_Clicked"
+                HorizontalOptions="Fill"/>
+                
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
